@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Agency Template</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<table class="table">
+<tbody>
+	<tr>
+		<td>Income: </td>
+		<td data-bind="value: income"></td>
+	</tr>
+</tbody>
+<tbody data-bind="foreach:spendingCategories">
+	<tr>
+		<td data-bind="text: name"></td>
+		<td> <input data-bind="value: amount"/></td>
+		
+		
+	</tr>
+</tbody>
+	<tbody>
+		<tr><td>Amount</td><td data-bind="text: totalSpent"></td></tr>
+	</tbody>
+
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © MyWebsite. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- / FOOTER --> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+<script src="budgetrow.js"></script>
+<script src="budgetViewModel.js"></script>
+<script type="text/javascript">
+	ko.applyBindings(new budgetViewModel());
+	</script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
